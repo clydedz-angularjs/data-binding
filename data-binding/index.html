@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data Binding and Filters | ClydeDz-AngularJS</title>
+    <!--include angular.js scripts [required]--->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+   
+    <!--include bootstrap stylesheet [optional]--->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />-->
+</head>
+<!--define a section for your angular app with ng-app directive--->
+<body ng-app>
+    <br /><br />
+    <div>
+        <div>
+            <div style="width:400px;margin-left:auto;margin-right:auto;">
+                <!--define a model for your angular ng-model directive--->
+                <h1>Start typing here:</h1>
+                <input ng-model="userInput" type="text" />
+                <br /><br />
+                <!--expressions using { { expression } }--->
+                <!--specifying model name in the expression enables data binding--->
+                <div>You typed {{userInput}}</div>
+                <br />
+                <!--expressions using { { expression | filter } }--->
+                <div>Lowercase {{userInput | lowercase}}</div>
+                <br />
+                <div>Uppercase {{userInput | uppercase}}</div>
+                <br />
+                <div>Limit to 5 characters {{userInput | limitTo:5}}</div>
+                <br />
+                <div>Currency {{userInput | currency}}</div>
+                <br />
+                <div>Number {{userInput | number}}</div>
+            </div>
+        </div>
+    </div>
+    <!--include bootstrap scripts [optional]--->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+</body>
+</html>
